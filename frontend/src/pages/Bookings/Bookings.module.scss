@@ -1,0 +1,54 @@
+:root {
+  --image-height: 200px;
+
+  --value-color-1: rgb(255, 55, 0);
+  --value-color-2: rgb(235, 121, 14);
+}
+
+.bookings__wrapper {
+  position: relative;
+  padding: 0 30px;
+  min-height: calc(100vh - 50px);
+  background-color: var(--gray-1);
+
+  .bookings__selector__wrapper {
+    z-index: 9998;
+    position: sticky;
+    top: 50px;
+    left: 0;
+    background-color: #001529;
+    box-shadow: var(--box-shadow-1);
+    border-radius: 0 0 10px 10px;
+    padding: 10px 0;
+    overflow: hidden;
+    user-select: none;
+
+    .bookings__selector__button__wrapper {
+      width: 100%;
+      padding: 0 10px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      button + button {
+        margin-left: 10px;
+      }
+
+      button * {
+        font-family: EncodeSans-Semibold;
+      }
+
+      button span {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  h3 {
+    padding: 50px 0;
+    width: 100%;
+    text-align: center;
+    font-family: EncodeSans-Semibold;
+    color: var(--text-color-9);
+  }
+}
