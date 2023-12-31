@@ -22,47 +22,35 @@ export const ADMIN_HEADER_ITEMS = [
 export const ALL_ORDER_COLUMN = [
     {
         title: 'Order Id',
-        dataIndex: 'orderId',
+        dataIndex: '_id',
         width: '15%',
     },
     {
         title: 'Username',
-        dataIndex: 'user',
-        render: (user) => {
-            return user.firstName.concat(' ', user.lastName);
+        dataIndex: 'userName',
+        render: (userName) => {
+            return userName.firstName.concat(' ', userName.lastName);
         },
         width: '12%',
     },
     {
         title: 'Phone',
-        dataIndex: 'user',
-        render: (user) => {
-            return user.phoneNumber;
-        },
+        dataIndex: 'phone',
         width: '10%',
     },
     {
         title: 'Address',
-        dataIndex: 'user',
-        render: (user) => {
-            return user.address;
-        },
+        dataIndex: 'address',
         width: '10%',
     },
     {
         title: 'Room Name',
-        dataIndex: 'room',
-        render: (room) => {
-            return room.roomName;
-        },
+        dataIndex: 'roomName',
         width: '10%',
     },
     {
         title: 'Room Type',
-        dataIndex: 'room',
-        render: (room) => {
-            return room.roomType.charAt(0).toUpperCase() + room.roomType.slice(1);
-        },
+        dataIndex: 'roomType',
         filters: [
             {
                 text: 'Single',
@@ -75,7 +63,7 @@ export const ALL_ORDER_COLUMN = [
         ],
         filterMode: 'tree',
         filterSearch: true,
-        onFilter: (value, record) => record.room.roomType.toLowerCase().startsWith(value),
+        onFilter: (value, record) => record.roomType.toLowerCase().startsWith(value),
         width: '10%',
     },
     {
@@ -90,26 +78,6 @@ export const ALL_ORDER_COLUMN = [
         width: '10%',
     },
     {
-        title: 'Status',
-        dataIndex: 'status',
-        render: (status) => {
-            return status.charAt(0).toUpperCase() + status.slice(1);
-        },
-        filters: [
-            {
-                text: 'Done',
-                value: 'done',
-            },
-            {
-                text: 'Cancel',
-                value: 'cancel',
-            },
-        ],
-        onFilter: (value, record) => record.status.toLowerCase().startsWith(value),
-        filterSearch: true,
-        width: '10%',
-    },
-    {
         title: 'Delete Room',
         dataIndex: '',
         key: 'x',
@@ -121,13 +89,13 @@ export const ALL_ORDER_COLUMN = [
                     okTextConfirm={'Yes, delete it'}
                     cancelTextConfirm={'Cancel'}
                     onOkConfirm={async () => {
-                        // try {
-                        //     handleRemoveData(`/orders/${record.orderId}`);
-                        //     ToastSuccess('Remove order successfully');
-                        // } catch (error) {
-                        //     ToastError('Opps. Something went wrong. Remove order failed');
-                        //     throw new Error(error);
-                        // }
+                        try {
+                            handleRemoveData(`/orders/${record.orderId}`);
+                            ToastSuccess('Remove order successfully');
+                        } catch (error) {
+                            ToastError('Opps. Something went wrong. Remove order failed');
+                            throw new Error(error);
+                        }
                     }}
                 >
                     Delete
@@ -164,7 +132,7 @@ export const ALL_AMENITY_COLUMN = [
         ],
         filterMode: 'tree',
         filterSearch: true,
-        onFilter: (value, record) => record.room.roomType.toLowerCase().startsWith(value),
+        onFilter: (value, record) => record.roomType.toLowerCase().startsWith(value),
         width: '10%',
     },
     {

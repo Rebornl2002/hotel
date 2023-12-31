@@ -1,160 +1,164 @@
 :root {
-  --room-text-color-1: rgb(255, 132, 0);
+    --room-text-color-1: rgb(255, 132, 0);
 }
 
 .room__wrapper--padding {
-  padding: 30px;
-  background-color: var(--gray-1);
-  min-height: calc(100vh - 50px);
+    padding: 30px;
+    background-color: var(--gray-1);
+    min-height: calc(100vh - 50px);
 }
 
 .room__wrapper {
-  margin-right: 30px;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  box-shadow: var(--box-shadow-1);
-  padding: 20px 40px;
-  background-color: white;
+    margin-right: 30px;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow-1);
+    padding: 20px 40px;
+    background-color: white;
 
-  & * {
-    color: var(--text-color-10);
-  }
+    & * {
+        color: var(--text-color-10);
+    }
 }
 
 .room__header__hotel--name {
-  font-family: EncodeSans-Bold;
-  user-select: none;
+    font-family: EncodeSans-Bold;
+    user-select: none;
 }
 
 .room__header__room--name {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 
-  & * {
-    font-family: EncodeSans-SemiBold;
-    font-size: 20px;
-  }
+    & * {
+        font-family: EncodeSans-SemiBold;
+        font-size: 20px;
+    }
 }
 
 .room__header__room--name__title {
-  margin-left: 10px;
-  color: var(--room-text-color-1);
+    margin-left: 10px;
+    color: var(--room-text-color-1);
 }
 
 .room__info__wrapper {
-  padding: 20px 0;
+    padding: 20px 0;
 
-  .booking__btn__wrapper {
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    .booking__btn__wrapper {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
 
-    button span {
-      font-family: EncodeSans-Semibold;
+        button span {
+            font-family: EncodeSans-Semibold;
+        }
     }
-  }
 }
 
 // carousel
 
 .room__info__carousel__wrapper {
-  flex: 1;
+    flex: 1;
+    img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 // room details
 
 .room__info__detail__wrapper {
-  flex: 1;
-  height: 100%;
-  padding-top: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    flex: 1;
+    height: 100%;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .detail-item {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 
-  & + & {
-    margin-top: 10px;
-  }
+    & + & {
+        margin-top: 10px;
+    }
 }
 
 .label {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .value--orange {
-  margin-left: 10px;
-  font-size: 20px;
-  color: var(--room-text-color-1);
+    margin-left: 10px;
+    font-size: 20px;
+    color: var(--room-text-color-1);
 }
 
 .room__info__detail__wrapper {
-  & * {
-    font-family: EncodeSans-Semibold;
-  }
-
-  .room__info__detail__rating__wrapper {
-    .room__info__detail__rating__label {
+    & * {
+        font-family: EncodeSans-Semibold;
     }
 
-    .room__info__detail__rating__value {
-      margin-right: 10px;
+    .room__info__detail__rating__wrapper {
+        .room__info__detail__rating__label {
+        }
+
+        .room__info__detail__rating__value {
+            margin-right: 10px;
+        }
+
+        .room__info__detail__rating__icon {
+            height: 20px;
+            width: 20px;
+            object-fit: cover;
+        }
     }
 
-    .room__info__detail__rating__icon {
-      height: 20px;
-      width: 20px;
-      object-fit: cover;
-    }
-  }
+    .room__info__detail__price__wrapper {
+        .room__info__detail__price__label {
+        }
 
-  .room__info__detail__price__wrapper {
-    .room__info__detail__price__label {
+        .room__info__detail__price__value {
+        }
     }
 
-    .room__info__detail__price__value {
-    }
-  }
+    .room__info__detail__type__wrapper {
+        .room__info__detail__type__label {
+        }
 
-  .room__info__detail__type__wrapper {
-    .room__info__detail__type__label {
-    }
-
-    .room__info__detail__type__value {
-    }
-  }
-
-  .room__info__detail__classification__wrapper {
-    .room__info__detail__classification__label {
+        .room__info__detail__type__value {
+        }
     }
 
-    .room__info__detail__classification__value {
-    }
-  }
+    .room__info__detail__classification__wrapper {
+        .room__info__detail__classification__label {
+        }
 
-  .room__info__detail__desc__wrapper {
-    .room__info__detail__desc__label {
-      align-self: flex-start;
-      display: flex;
-      align-items: center;
+        .room__info__detail__classification__value {
+        }
     }
 
-    .room__info__detail__desc__value {
-      margin-left: 10px;
-      font-family: EncodeSans;
-      font-size: 22px;
+    .room__info__detail__desc__wrapper {
+        .room__info__detail__desc__label {
+            align-self: flex-start;
+            display: flex;
+            align-items: center;
+        }
+
+        .room__info__detail__desc__value {
+            margin-left: 10px;
+            font-family: EncodeSans;
+            font-size: 22px;
+        }
     }
-  }
 }
 
 .room__interaction__wrapper {
-  margin-top: 10px;
-  border-top: 1px solid orangered;
-  padding: 20px 0;
+    margin-top: 10px;
+    border-top: 1px solid orangered;
+    padding: 20px 0;
 }

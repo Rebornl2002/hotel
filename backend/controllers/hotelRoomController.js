@@ -23,6 +23,25 @@ export const getAllData = async (req, res) => {
     }
 };
 
+export const getDataByNameRoom = async (req, res) => {
+    const id = Number(req.params.id);
+
+    try {
+        const data = await hotelRoom.findOne({ roomName: id });
+
+        res.status(200).json({
+            success: true,
+            message: 'Successfully',
+            data: data,
+        });
+    } catch (error) {
+        res.status(404).json({
+            success: false,
+            message: 'Not found ',
+        });
+    }
+};
+
 export const createRoom = async (req, res) => {
     const newRoom = new hotelRoom(req.body);
     try {

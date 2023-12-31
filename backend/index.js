@@ -7,6 +7,7 @@ import cookieParser from 'cookie-parser';
 import hotelRoomRouter from './routes/hotelRoom.js';
 import loginRoute from './routes/login.js';
 import amenityRoute from './routes/amenity.js';
+import orderRoute from './routes/order.js';
 
 dotenv.config();
 
@@ -38,6 +39,7 @@ app.use(cookieParser());
 app.use('/room', hotelRoomRouter);
 app.use('/login', loginRoute);
 app.use('/amenity', amenityRoute);
+app.use('/order', orderRoute);
 
 app.listen(port, () => {
     connect();
